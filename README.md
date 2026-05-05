@@ -1,36 +1,43 @@
 # 🔐 File Encryption and Decryption using Python
-This project demonstrates a simple yet secure way to encrypt and decrypt text files using the Fernet module from Python’s cryptography library.
+
+A Python tool that encrypts and decrypts files using symmetric key cryptography via the `cryptography` library (Fernet).
 
 ## 📌 Features
-- Generates a secure encryption key.
-- Encrypts the content of a file and saves it as a new encrypted file.
-- Decrypts the encrypted file back to its original form.
-- Saves the key securely for future encryption/decryption.
+- Generates a secure symmetric encryption key
+- Encrypts any file and saves the encrypted version
+- Decrypts the encrypted file back to original content
+- Uses industry-standard Fernet (AES-128-CBC) encryption
 
-## 📁 Files
-- mykey.key: Stores the generated Fernet encryption key.
-- encrypt_decrypt.txt: Your original input file.
-- enc_encrypt_decrypt.txt: Encrypted version of the input file.
-- dec_encrypt_decrypt.txt: Decrypted version (should match the original).
+## 🛠️ Tech Stack
+Python, cryptography (Fernet), File I/O
 
-## 🧪 How It Works
-- Generate a secure key and save it to a .key file.
-- Read the original file and encrypt its contents.
-- Save the encrypted data to a new file.
-- Decrypt the encrypted file using the same key.
-- Save the decrypted content to verify it matches the original.
+## ▶️ How to Run
 
-## ▶️ Usage
-Install the required library:
-```
+```bash
 pip install cryptography
+python encrypt_decrypt.py
 ```
-Run the script:
-```
-python your_script_name.py
-```
-Make sure your input file encrypt_decrypt.txt exists in the same directory before running the script.
 
-## 🛡️ Dependencies
-- Python 3.x
-- cryptography library
+Place your file as `encrypt_decrypt.txt` in the same directory before running.
+
+## ⚙️ How It Works
+1. A Fernet key is generated and saved to `mykey.key`
+2. The original file is read and encrypted → `enc_encrypt_decrypt.txt`
+3. The encrypted file is decrypted → `dec_encrypt_decrypt.txt`
+
+## 📁 Project Structure
+```
+File-Encryption-and-Decryption-using-Python/
+├── encrypt_decrypt.py
+├── encrypt_decrypt.txt
+├── enc_encrypt_decrypt.txt
+├── dec_encrypt_decrypt.txt
+├── mykey.key
+└── README.md
+```
+
+## 🧠 Skills Demonstrated
+- Python cryptography library usage
+- File I/O (read/write binary)
+- Symmetric key encryption/decryption
+- Security concepts in Python
